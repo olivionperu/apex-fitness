@@ -5,8 +5,12 @@
   --color-surface: #16161A;
   --color-accent: #C6FF3D;
   --color-accent-dark: #A3D62E;
+  --color-accent-ink: #4B6B18;
   --color-text: #F5F5F5;
   --color-muted: #9A9AA2;
+  --color-bg-light: #FAFAF8;
+  --color-ink: #14140F;
+  --color-ink-muted: #5B5B63;
   --radius: 14px;
   --max-width: 1140px;
   --font: 'Poppins', sans-serif;
@@ -613,3 +617,77 @@ section { padding: 88px 0; }
   display: inline-block; color: var(--color-accent); font-size: .72rem;
   text-transform: uppercase; letter-spacing: .05em; font-weight: 700; margin-bottom: 12px;
 }
+
+/* ============================================
+   Light sections (white background variant)
+   Alternated with dark sections so the site
+   doesn't read as flat/monotone.
+   ============================================ */
+.section-light {
+  background: var(--color-bg-light);
+  color: var(--color-ink);
+}
+.section-light .section-title { color: var(--color-ink); }
+.section-light .section-title span { color: var(--color-accent-ink); }
+.section-light .section-subtitle { color: var(--color-ink-muted); }
+.section-light p { color: var(--color-ink-muted); }
+
+.section-light .card {
+  background: #fff;
+  border: 1px solid rgba(11,11,13,.08);
+  box-shadow: 0 2px 10px rgba(11,11,13,.04);
+}
+.section-light .card:hover { border-color: var(--color-accent-ink); box-shadow: 0 16px 34px rgba(11,11,13,.09); }
+.section-light .card h3 { color: var(--color-ink); }
+.section-light .card p { color: var(--color-ink-muted); }
+.section-light .icon, .section-light .icon-circle { background: rgba(75,107,24,.12); }
+.section-light .icon svg, .section-light .icon-circle svg { color: var(--color-accent-ink); }
+
+.stats.section-light { border-bottom-color: rgba(11,11,13,.08); }
+.stats.section-light .num { color: var(--color-accent-ink); }
+.stats.section-light .label { color: var(--color-ink-muted); }
+
+.section-light .value-list li { color: var(--color-ink-muted); }
+.section-light .value-list li::before { color: var(--color-accent-ink); }
+
+.section-light .service-card { background: #fff; border: 1px solid rgba(11,11,13,.08); box-shadow: 0 2px 10px rgba(11,11,13,.04); }
+.section-light .service-card h3 { color: var(--color-ink); }
+.section-light .service-card p { color: var(--color-ink-muted); }
+
+.section-light .price-card { background: #fff; border: 1px solid rgba(11,11,13,.1); }
+.section-light .price-card.featured { border-color: var(--color-accent-ink); background: linear-gradient(180deg, rgba(75,107,24,.06), #fff); }
+.section-light .price-card h3 { color: var(--color-ink); }
+.section-light .price-card .amount { color: var(--color-accent-ink); }
+.section-light .price-card .amount span { color: var(--color-ink-muted); }
+.section-light .price-card li { color: var(--color-ink-muted); border-bottom-color: rgba(11,11,13,.08); }
+.section-light .price-card li::before { color: var(--color-accent-ink); }
+
+.section-light .testimonial-card { background: #fff; border: 1px solid rgba(11,11,13,.08); box-shadow: 0 2px 10px rgba(11,11,13,.04); }
+.section-light .testimonial-card .stars { color: var(--color-accent-ink); }
+.section-light .testimonial-card p { color: var(--color-ink); }
+.section-light .testimonial-author strong { color: var(--color-ink); }
+.section-light .testimonial-author span { color: var(--color-ink-muted); }
+.section-light .testimonial-author .avatar { background: rgba(75,107,24,.12); color: var(--color-accent-ink); }
+
+.section-light .team-card .avatar { background: rgba(75,107,24,.12); }
+.section-light .team-card .avatar svg { color: var(--color-accent-ink); }
+.section-light .team-card:hover .avatar { background: var(--color-accent-ink); }
+.section-light .team-card .role { color: var(--color-accent-ink); }
+
+.section-light .promo-card .discount { color: var(--color-accent-ink); }
+.section-light .promo-card .expiry { color: var(--color-ink-muted); }
+
+.section-light .news-card .tag { color: var(--color-accent-ink); }
+
+.section-light .form-group label { color: var(--color-ink); }
+.section-light .form-group input, .section-light .form-group textarea {
+  background: #fff; border: 1px solid rgba(11,11,13,.15); color: var(--color-ink);
+}
+.section-light .form-group input:focus, .section-light .form-group textarea:focus { border-color: var(--color-accent-ink); }
+.section-light .form-note { color: var(--color-ink-muted); }
+.section-light .contact-info-item .icon { background: rgba(75,107,24,.12); color: var(--color-accent-ink); }
+.section-light .contact-info-item h4 { color: var(--color-ink); }
+.section-light .contact-info-item p, .section-light .contact-info-item a { color: var(--color-ink-muted); }
+
+.section-light .btn-outline { border-color: rgba(11,11,13,.25); color: var(--color-ink); }
+.section-light .btn-outline:hover { border-color: var(--color-ink); background: rgba(11,11,13,.05); }
