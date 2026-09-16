@@ -428,13 +428,67 @@ section { padding: 88px 0; }
 .price-card li::before { content: '✓ '; color: var(--color-accent); font-weight: 700; }
 
 .cta-band {
-  background: linear-gradient(135deg, #1A1A1E, #0B0B0D);
+  position: relative;
+  background-image:
+    linear-gradient(135deg, rgba(11,11,13,.92), rgba(11,11,13,.88)),
+    url('../img/hero-2.jpg');
+  background-size: cover;
+  background-position: center;
   text-align: center;
   border-top: 1px solid rgba(255,255,255,.08);
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
+.cta-band .container { position: relative; z-index: 1; }
 .cta-band h2 { font-family: var(--font-display); font-size: 2.6rem; letter-spacing: .02em; text-transform: uppercase; margin: 0 0 10px; }
 .cta-band p { color: var(--color-muted); margin: 0 0 30px; }
+
+/* Explore tiles (Inicio) */
+.explore-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.08);
+  transition: transform .3s var(--ease), border-color .3s var(--ease);
+}
+.explore-card:hover { transform: translateY(-6px); border-color: var(--color-accent); }
+.explore-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.explore-card:hover img { transform: scale(1.08); }
+.explore-card .explore-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(11,11,13,.95) 15%, rgba(11,11,13,.1) 60%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 20px;
+}
+.explore-overlay h3 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .02em; font-size: 1.3rem; margin: 0 0 4px; }
+.explore-overlay span { font-size: .74rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: .04em; }
+.explore-card .go {
+  position: absolute; top: 14px; right: 14px;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(11,11,13,.6); border: 1px solid rgba(255,255,255,.2);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+.explore-card .go svg { width: 16px; height: 16px; }
+.explore-card:hover .go { background: var(--color-accent); border-color: var(--color-accent); color: #0B0B0D; }
+@media (max-width: 780px) { .explore-card { aspect-ratio: 4 / 3; } }
+
+/* Testimonials (Inicio) */
+.testimonial-card { text-align: left; }
+.testimonial-card .stars { color: var(--color-accent); letter-spacing: 2px; margin-bottom: 16px; font-size: 1.05rem; }
+.testimonial-card p { color: #fff; font-size: .96rem; font-style: italic; margin: 0 0 24px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-author .avatar {
+  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(198,255,61,.1); color: var(--color-accent);
+  display: flex; align-items: center; justify-content: center;
+}
+.testimonial-author .avatar svg { width: 20px; height: 20px; }
+.testimonial-author strong { display: block; font-size: .88rem; }
+.testimonial-author span { font-size: .74rem; color: var(--color-muted); }
 
 .page-hero {
   position: relative;
