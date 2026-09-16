@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contacto | APEX Fitness Studio</title>
-<meta name="description" content="Escríbenos, agenda tu clase de prueba o resuelve tus dudas.">
+<title>Noticias | APEX Fitness Studio</title>
+<meta name="description" content="Tips de entrenamiento, nutrición y vida activa por el equipo de APEX Fitness Studio.">
 <link rel="icon" href="img/logo-apex.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,8 +21,8 @@
       <li><a href="horarios.html">Horarios</a></li>
       <li><a href="promociones.html">Promociones</a></li>
       <li><a href="planes.html">Planes</a></li>
-      <li><a href="noticias.html">Noticias</a></li>
-      <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      <li><a href="noticias.html" aria-current="page">Noticias</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
     <a href="https://wa.me/51999999999" class="nav-cta" target="_blank" rel="noopener">Únete ahora</a>
     <button class="nav-toggle" aria-label="Abrir menú">☰</button>
@@ -31,64 +31,38 @@
 
 <section class="page-hero">
   <div class="container">
-    <h1>Hablemos</h1>
-    <p>Agenda tu clase de prueba gratis o resuelve cualquier duda.</p>
+    <h1>Noticias</h1>
+    <p>Tips de entrenamiento, nutrición y vida activa.</p>
   </div>
 </section>
 
 <section>
-  <div class="container contact-grid">
-    <div>
-      <h2 class="section-title" style="text-align:left">Envíanos un mensaje</h2>
-      <form id="contact-form">
-        <div class="form-group">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Correo</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" required placeholder="Ej: Quiero agendar mi clase de prueba gratis"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
-        <p class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje listo para confirmar el envío.</p>
-      </form>
+  <div class="container">
+    <div class="grid-3">
+      <div class="card news-card reveal">
+        <span class="tag">Entrenamiento</span>
+        <h3>Cómo elegir el gimnasio correcto</h3>
+        <p>Cercanía, horarios y ambiente pesan tanto como el equipamiento. Te contamos qué evaluar antes de inscribirte en cualquier gimnasio, incluido el nuestro.</p>
+      </div>
+      <div class="card news-card reveal">
+        <span class="tag">Nutrición</span>
+        <h3>Comer bien sin obsesionarte</h3>
+        <p>Los primeros meses de entrenamiento suelen venir con ansiedad por la comida. Consejos simples para mantener una alimentación equilibrada sin volverte loco contando calorías.</p>
+      </div>
+      <div class="card news-card reveal">
+        <span class="tag">Mitos y verdades</span>
+        <h3>Lo que sí y no funciona en el gimnasio</h3>
+        <p>"El abdomen se marca solo con crunches", "las fajas hacen bajar de peso"... revisamos algunos mitos comunes del mundo fitness con base en lo que realmente funciona.</p>
+      </div>
     </div>
-    <div>
-      <div class="contact-info-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div>
-          <h4>Dirección</h4>
-          <p>Av. Los Constructores 890, Surco</p>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg></div>
-        <div>
-          <h4>WhatsApp</h4>
-          <a href="https://wa.me/51999999999" target="_blank" rel="noopener">999 999 999</a>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-        <div>
-          <h4>Instagram</h4>
-          <p>@apexfitness.demo</p>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <div>
-          <h4>Horario</h4>
-          <p>Lunes a sábado, 6:00 am – 10:00 pm</p>
-        </div>
-      </div>
-      <iframe class="map-embed" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=Surco,Lima,Peru&output=embed" title="Ubicación de APEX Fitness Studio"></iframe>
-    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>¿Tienes una duda puntual?</h2>
+    <p>Nuestros coaches te responden directo por WhatsApp.</p>
+    <a href="https://wa.me/51999999999?text=Hola%2C%20tengo%20una%20consulta" class="btn btn-whatsapp" target="_blank" rel="noopener">Preguntar a un coach</a>
   </div>
 </section>
 
