@@ -29,6 +29,36 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  var slides = document.querySelectorAll('.hero-slide');
+  var dots = document.querySelectorAll('.hero-dot');
+  var prevBtn = document.querySelector('.hero-arrow-prev');
+  var nextBtn = document.querySelector('.hero-arrow-next');
+  if (slides.length) {
+    var current = 0;
+    var slideTimer;
+
+    var goToSlide = function (index) {
+      slides[current].classList.remove('is-active');
+      dots[current].classList.remove('is-active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+      dots[current].classList.add('is-active');
+    };
+
+    var startAutoplay = function () {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(function () { goToSlide(current + 1); }, 10000);
+    };
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { goToSlide(current - 1); startAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goToSlide(current + 1); startAutoplay(); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goToSlide(i); startAutoplay(); });
+    });
+
+    startAutoplay();
+  }
+
   var form = document.querySelector('#contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
